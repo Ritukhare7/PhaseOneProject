@@ -3,13 +3,13 @@ package lokers.gradable;
 import java.util.Scanner;
 
 public class UserOptionsSecondary extends FileOperations {
-	
-		Scanner scanner;
+
+	Scanner scanner;
 
 	public void displaySecondaryOptions() {
 		System.out.println(" " + "\nPlease select any of the following options:\n" + "\n\tChoose a for Adding the files"
-				+ "\n\tChoose b for deleting a file" + "\n\tChoose c to search a file\n" +
-				"\n\tChoose d to back to previous menu\n");
+				+ "\n\tChoose b for deleting a file" + "\n\tChoose c to search a file\n"
+				+ "\n\tChoose d to back to previous menu\n");
 	}
 
 	public String takeUserSecondaryInput() {
@@ -19,14 +19,12 @@ public class UserOptionsSecondary extends FileOperations {
 		return secondaryOption;
 	}
 
-	//TO be reviewed
 	public String takeFile() {
-	    scanner = new Scanner(System.in);
+		scanner = new Scanner(System.in);
 		String name = scanner.next();
 		return name;
 	}
 
-	
 	public void secondaryFunction() {
 		try {
 			switch (takeUserSecondaryInput()) {
@@ -56,7 +54,7 @@ public class UserOptionsSecondary extends FileOperations {
 					System.out.println("Thank you for using the application!");
 					System.exit(0);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+
 					e.printStackTrace();
 				}
 				break;
@@ -65,10 +63,8 @@ public class UserOptionsSecondary extends FileOperations {
 			}
 
 		} catch (Exception e) {
-			// TODO: handle exception
+
 		}
 	}
 
-	
-	
 }
